@@ -4,7 +4,7 @@
 class Stack {
   constructor() {
     this.top = null;
-    this.length = 0;
+    this._length = 0;
   }
 
   /**
@@ -15,7 +15,7 @@ class Stack {
     if (!this.top) return null;
     const node = this.top;
     this.top = this.top.next;
-    this.length--;
+    this._length--;
     return node.value;
   }
 
@@ -25,9 +25,9 @@ class Stack {
    * @returns {number} The new length of the stack.
    */
   push(value) {
-    this.top = new Node(value, this.top);
-    this.length++;
-    return this.length;
+    this.top = new Stack.Node(value, this.top);
+    this._length++;
+    return this._length;
   }
 
   /**
@@ -35,7 +35,7 @@ class Stack {
    * @returns {any | null} The value of the top node, or null if the stack is empty.
    */
   peek() {
-    this.top?.value;
+    return this.top?.value;
   }
 
   /**
@@ -43,7 +43,7 @@ class Stack {
    * @returns {number} The number of elements in the stack.
    */
   get length() {
-    return this.length;
+    return this._length;
   }
 }
 /**
