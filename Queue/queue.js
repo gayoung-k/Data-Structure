@@ -1,7 +1,7 @@
 /**
  * Class representing a Queue data structure.
  */
-class Queue {
+export class Queue {
   arr = [];
 
   /**
@@ -38,14 +38,14 @@ class Queue {
 }
 
 // Example usage
-const queue = new Queue();
-queue.enqueue(4);
-queue.enqueue(2);
-queue.enqueue(3);
-queue.enqueue(5);
-queue.enqueue(1);
-console.log(queue.dequeue()); // 4
-console.log(queue.dequeue()); // 2
-console.log(queue.dequeue()); // 3
-console.log(queue.peek()); // 5
-console.log(queue.length); // 2
+// const queue = new Queue();
+// queue.enqueue(4);
+// queue.enqueue(2);
+// queue.enqueue(3);
+// queue.enqueue(5);
+// queue.enqueue(1);
+// console.log(queue.dequeue()); // 4
+// console.log(queue.dequeue()); // 2
+// console.log(queue.dequeue()); // 3
+// console.log(queue.peek()); // 5
+// console.log(queue.length); // 2
